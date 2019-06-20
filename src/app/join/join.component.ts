@@ -29,7 +29,7 @@ export class JoinComponent implements OnInit {
     const param = this.joinForm.value;
     this._userService.join(param)
       .subscribe(() => {
-        this._router.navigate(['/app'])
+        this._router.navigate(['/app/channel/general'])
       },
         (error) => {
           this.joining = false;
