@@ -1,13 +1,17 @@
-# AngularSlackUi
+# AngularSlack
 
-This is a simple slack app ui clone. [DEMO](http://www.eddieos.me/slack-clone-angular-ui/). This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+This is a simple slack app clone. [DEMO](http://www.eddieos.me/slack-clone-angular-ui/). This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+
+UI cloned from `https://github.com/eddieos/slack-clone-angular-ui`
+
 
 
 ## TODO
-- [x] Route between  messages and channels
-- [ ] Search page component for users to send DM
-- [ ] Search page component for created channels to join any
-- [ ] Add channel page
+- [x] Initialize App with Stream Chat [v1.0.0](https://github.com/theo4u/slack-clone-angular/releases/tag/v1.0.0)
+- [ ] Part1: Channel and Direct messages with Stream Chat
+- [ ] Part2:  Fleshing out our Slack app with online status, message reactions and is typing
+- [ ] Part3: Adding thread feature to our Slack app
+- [ ] Part4: Adding custom bot (Slack bot) with Dialogflow to our Slack App
 
 ## Development server
 
