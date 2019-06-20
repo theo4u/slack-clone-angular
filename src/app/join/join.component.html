@@ -1,0 +1,55 @@
+<div class="create">
+  <div class="create-content">
+    <h1 class="create-content-header">Create Profile</h1>
+    <p class="create-text-tip">
+      We need this information to identify you while you  use our slack clone
+    </p>
+    <form class="create-form" [formGroup]="joinForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="create-input with-channel">
+        <label for="name">Name</label>
+        <div class="input-container">
+          <input id="name" name="name" formControlName="name" type="text" placeholder="e.g Theophilus Omoregbee"/>
+        </div>
+      </div>
+
+      <div class="create-input with-channel">
+        <label for="displayName">Display Name</label>
+        <div class="input-container">
+          <input id="displayName" name="displayName" formControlName="displayName" type="text" placeholder="e.g Theo"/>
+        </div>
+        <small class="text-hint">
+          Username must be lowercase, without spaces or periods, and shorter than 22 characters.
+        </small>
+      </div>
+
+      <div class="create-input with-channel">
+        <label for="email">Email</label>
+        <div class="input-container">
+          <input id="email" name="email" formControlName="email" type="text" placeholder="e.g theo@domain.com"/>
+        </div>
+        <small class="text-hint" *ngIf="joinForm.get('email').hasError('email')">
+          Email is required
+        </small>
+      </div>
+
+      <div class="create-input with-channel">
+        <label for="image">Image</label>
+        <div class="input-container">
+          <input id="image" name="image" formControlName="image" type="text" placeholder="e.g https://avatar.github.com/u/theo4u"/>
+        </div>
+        <small class="text-hint">
+          Image can be optional and we default to gravatar.
+        </small>
+      </div>
+
+      <div class="create-button-group">
+        <button class="btn btn-large">Cancel</button>
+        <button class="btn btn-primary btn-large submit" type="submit" [disabled]="joining || joinForm.invalid">
+            {{joining ?'Joining':'Join'}}
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
+

@@ -19,6 +19,11 @@ import { APP_ROUTES } from './app.route';
 import { NewChannelComponent } from './new-channel/new-channel.component';
 import { SearchChannelComponent } from './search-channel/search-channel.component';
 import { NewMessageComponent } from './new-message/new-message.component';
+import { JoinComponent } from './join/join.component';
+
+
+import { HttpClientModule } from '@angular/common/http'; 
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,12 +41,16 @@ import { NewMessageComponent } from './new-message/new-message.component';
     ChatsComponent,
     NewChannelComponent,
     SearchChannelComponent,
-    NewMessageComponent
+    NewMessageComponent,
+    JoinComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(APP_ROUTES),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

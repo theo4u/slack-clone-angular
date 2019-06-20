@@ -5,6 +5,7 @@ import { MessageComponent } from './chat/message/message.component';
 import { NewChannelComponent } from './new-channel/new-channel.component';
 import { SearchChannelComponent } from './search-channel/search-channel.component';
 import { NewMessageComponent } from './new-message/new-message.component';
+import { JoinComponent } from './join/join.component';
 
 export const APP_ROUTES: Routes = [
     {path:'', redirectTo:'app', pathMatch:'full'},
@@ -18,5 +19,6 @@ export const APP_ROUTES: Routes = [
     },
     {path: 'new-channel', component: NewChannelComponent},
     {path: 'search-channel', component: SearchChannelComponent},
-    {path: 'new-message', component: NewMessageComponent}
+    {path: 'new-message', component: NewMessageComponent},
+    {path: 'join', component: JoinComponent}
 ]
