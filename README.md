@@ -1,6 +1,6 @@
 # AngularSlack
 
-This is a simple slack app clone. [DEMO](http://www.eddieos.me/slack-clone-angular-ui/). This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+This is a simple slack app clone. [DEMO](https://theo4u.github.io/slack-clone-angular/join). This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
 UI cloned from `https://github.com/eddieos/slack-clone-angular-ui`
 

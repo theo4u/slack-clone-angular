@@ -6,6 +6,7 @@ import {tap, mergeMap} from 'rxjs/operators'
 import { HttpClient } from '@angular/common/http';
 import { StreamService } from './stream.service';
 import { User } from 'stream-chat';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ import { User } from 'stream-chat';
 export class UserService {
   private _token: string;
   private _user: IUser;
-  private _endPoint = 'http://localhost:3000'// normally you'd move this to environment.ts
+  private _endPoint = environment.endPoint || 'http://localhost:3000'// normally you'd move this to environment.ts
   
   constructor(private _http: HttpClient,  private _stream:StreamService) { }
 
