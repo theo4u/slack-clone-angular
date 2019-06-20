@@ -15,6 +15,24 @@ UI cloned from `https://github.com/eddieos/slack-clone-angular-ui`
 
 ## Development server
 
+* Update [stream.service.ts](https://github.com/theo4u/slack-clone-angular/blob/master/src/app/services/stream.service.ts) to use your own `APP_KEY`
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run `npm run server` it follows [Twelve-Factor](https://12factor.net/) for handling environment variables listed below
+  * `STREAM_APP_KEY`
+  * `STREAM_APP_SECRET`
+  
+e.g `STREAM_APAP_KEY=[appKey] node server.js` then `POST http://localhost:2000/join`
+
+or Create a `.env` file with the above variables above, like so
+```sh
+STREAM_APP_KEY="APP_KEY"
+STREAM_APP_SECRET="APP_SECRET"
+```
+and run the below in your terminal
+```sh 
+node server.js
+```
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
@@ -36,4 +54,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# slack-clone-angular-ui
+
+## Deployment
+Using `gh-pages` to host our angular app. Run `npm run deploy` to build and send to gh-pages  
+
+## Built With
+
+* [StreamChat](https://getstream.com/chat) - APIs to enable devs building realtime chat features
+* [Angular](https://angular.io/) - Frontend framework that makes it easy to build  application with the web
+* [Express](https://expressjs.com/) - Used for our APIs server
+
