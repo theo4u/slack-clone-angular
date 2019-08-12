@@ -10,12 +10,12 @@
     <p class="create-text-tip">
       Channels are where your members communicate. They’re best when organized around a topic — #marketing, for example.
     </p>
-    <form class="create-form">
+    <form class="create-form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
       <div class="create-input with-channel">
         <label for="lfname">Name</label>
         <div class="input-container">
           <span class="ev-hash"></span>
-          <input id="lfname" name="fname" type="text" placeholder="e.g marketing"/>
+          <input id="lfname" name="fname" type="text" placeholder="e.g marketing" formControlName="name"/>
         </div>
         <small class="text-hint">
           Names must be lowercase, without spaces or periods, and shorter than 22 characters.
@@ -26,15 +26,15 @@
       <div class="create-input">
         <label for="lfname">Purpose</label>
         <div class="input-container">
-          <input id="lfname" name="fname" type="text" placeholder="e.g marketing"/>
+          <input id="lfname" name="fname" type="text" placeholder="e.g marketing" formControlName="description" />
         </div>
         <small class="text-hint">
           What's this channel about?
         </small>
       </div>
       <div class="create-button-group">
-        <button class="btn btn-large">Cancel</button>
-        <button class="btn btn-primary btn-large submit">Submit</button>
+        <button type="button" class="btn btn-large">Cancel</button>
+        <button type="submit" class="btn btn-primary btn-large submit">Submit</button>
       </div>
     </form>
   </div>

@@ -5,10 +5,10 @@ import { StreamChat } from 'stream-chat';
   providedIn: 'root'
 })
 export class StreamService {
-  private _client:any;
+  private _client: StreamChat;
 
   constructor() {
-    this._client = new StreamChat('API_KEY')
+    this._client = new StreamChat('v24gwb795mjz')
    }
 
    getClient() {
